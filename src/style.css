@@ -1,0 +1,72 @@
+
+:root {
+    --color-fondo: #000000;
+    --color-texto: #ffffff;
+    --color-secundario: #cfcfcf;
+    --color-primario: #ee05f2;
+    --color-primario-hover: #8e0296b7;
+    --color-footer: #1f1f1f;
+    --font-principal: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+
+
+:root {
+  --color-dark-bg: #0a0a0a;
+  --color-text-light: #d4d4d4;
+  --color-primary-white: #ffffff;
+  --color-accent-gold: #ffc700;
+  --color-accent-red: #e53a40;
+  --font-heading: "Oswald", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-body);
+}
+
+
+:root {
+    --color-principal: #ee05f2;     /* Fuxia del menú y acentos */
+    --color-boton: #FFC700;         /* Amarillo para botones */
+    --color-fondo: BLACK;           /* Azul oscuro profundo */
+    --color-fondo-secundario: BLACK; /* Azul un poco más claro */
+    --color-tarjeta: BLACK;
+    --color-borde: #2a2a4a;
+    --color-texto-principal: #ffffff;
+    --color-texto-secundario: #c0c0d0;
+    --fuente-principal: 'Poppins', sans-serif;
+}
+body {
+    background-color: BLACK;
+    color: var(--color-texto-principal);
+    font-family: var(--fuente-principal);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
