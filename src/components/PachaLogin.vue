@@ -1,32 +1,40 @@
-<script setup>
-import { ref } from "vue";
+<script>
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 
-const email = ref("");
-const password = ref("");
-const statusMessage = ref("");
-const statusColor = ref("var(--color-text-light)");
-const isLoading = ref(false);
+export default {
+  setup() {
+    const email = ref('')
+    const password = ref('')
+    const statusMessage = ref('')
+    const statusColor = ref('')
+    const isLoading = ref(false)
+    const router = useRouter()  
 
-function handleLogin() {
-  statusMessage.value = "";
-  isLoading.value = false;
+    function handleLogin() {
+      statusMessage.value = ""
+      isLoading.value = false
 
-  if (email.value === "" || password.value === "") {
-    statusMessage.value = "ERROR: Por favor, complete todos los campos.";
-    statusColor.value = "var(--color-accent-red)";
-  } else if (password.value.length < 6) {
-    statusMessage.value =
-      "ERROR: La contraseña debe tener al menos 6 caracteres.";
-    statusColor.value = "var(--color-accent-red)";
-  } else {
-    statusMessage.value = `¡Acceso concedido a ${email.value}! Redirigiendo...`;
-    statusColor.value = "var(--color-text-light)";
-    isLoading.value = true;
+      if (email.value === "" || password.value === "") {
+        statusMessage.value = "ERROR: Por favor, complete todos los campos."
+        statusColor.value = "var(--color-accent-red)"
+      } else if (password.value.length < 6) {
+        statusMessage.value =
+          "ERROR: La contraseña debe tener al menos 6 caracteres."
+        statusColor.value = "var(--color-accent-red)"
+      } else {
+        statusMessage.value = `¡Acceso concedido a ${email.value}! Redirigiendo...`
+        statusColor.value = "var(--color-text-light)"
+        isLoading.value = true
 
-    setTimeout(() => {
-      isLoading.value = false;
-      window.location.href = "inicio.html";
-    }, 2000);
+        setTimeout(() => {
+          isLoading.value = false
+          router.push('/inicio')  
+        }, 2000)
+      }
+    }
+
+    return { email, password, statusMessage, statusColor, isLoading, handleLogin }
   }
 }
 </script>
