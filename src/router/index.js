@@ -6,6 +6,7 @@ import Inicio from '../components/Inicio.vue'
 
 
 const routes = [
+  { path: '/', redirect: '/inicio' },
   { path: '/evento', component: Evento },
   { path: '/login', component: Login },
   { path: '/galeria', component: Galeria },
