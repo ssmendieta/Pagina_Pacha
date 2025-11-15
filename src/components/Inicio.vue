@@ -142,7 +142,7 @@ export default {
   },
   data() {
     return {
-      // --- ESTADO Y DATOS PARA EL HEADER ---
+      
       isMenuActivo: false,
       navLinks: [
         { text: "INICIO", url: "/inicio" },
@@ -151,7 +151,7 @@ export default {
       ],
 
 
-      // --- DATOS PARA EL FOOTER ---
+
       socialLinks: [
         {
           icon: 'fa-brands fa-instagram',
@@ -164,7 +164,7 @@ export default {
         { icon: 'fa-brands fa-tiktok', url: 'https://www.tiktok.com/@pachaboliviansunset' },
       ],
 
-      // --- DATOS PARA EL CONTENIDO PRINCIPAL ---
+
       whatsappReserva:
         'https://wa.me/59176007750?text=Hola%2C%20me%20gustaría%20realizar%20una%20reserva.',
       agendaData: [
@@ -185,9 +185,8 @@ export default {
         },
       ],
 
-      // --- ESTADO Y DATOS PARA EL CONTADOR (Mejora 3 de script.js) ---
-      // Esta es la fecha de tu App.vue (18 de Diciembre)
-      fechaFiestaBlanca: new Date(2025, 11, 18, 23, 0, 0), // 11 = Diciembre
+ 
+      fechaFiestaBlanca: new Date(2025, 11, 18, 23, 0, 0), 
       dias: 0,
       horas: 0,
       minutos: 0,
@@ -195,21 +194,20 @@ export default {
       fiestaComenzo: false,
       intervalo: null,
 
-      // --- ESTADO PARA EL NEWSLETTER ---
+      
       email: '',
     }
   },
   methods: {
-    // --- LÓGICA MIGRADA DE SCRIPT.JS (Mejora 1: Menú Móvil) ---
+ 
     toggleMenu() {
-      // Esta lógica estaba en Header.vue, pero ahora está aquí,
-      // en el componente principal que lo contiene todo.
-      this.isMenuActivo = !this.isMenuActivo // Invierte el estado (true/false)
+ 
+      this.isMenuActivo = !this.isMenuActivo 
     },
 
-    // --- LÓGICA MIGRADA DE SCRIPT.JS (Mejora 2: Animaciones) ---
+
     iniciarAnimacionesScroll() {
-      // Esta función ahora se ejecuta en 'mounted'
+
       const elementosAnimados = document.querySelectorAll('.animar')
       const observador = new IntersectionObserver(
         (entradas) => {
@@ -227,7 +225,7 @@ export default {
       })
     },
 
-    // --- LÓGICA MIGRADA DE SCRIPT.JS (Mejora 3: Contador) ---
+
     actualizarContador() {
       const ahora = new Date()
       const diferencia = this.fechaFiestaBlanca - ahora
@@ -242,25 +240,24 @@ export default {
       this.segundos = Math.floor((diferencia % (1000 * 60)) / 1000)
     },
 
-    // --- LÓGICA DEL NEWSLETTER ---
+
     enviarFormulario() {
       alert('¡Gracias por suscribirte con: ' + this.email)
-      this.email = '' // Limpia el input
+      this.email = '' 
     },
   },
   mounted() {
-    // Iniciar las animaciones de scroll
-    // $nextTick se asegura de que el HTML esté en la página antes de buscarlo
+
     this.$nextTick(() => {
       this.iniciarAnimacionesScroll()
     })
 
-    // Iniciar el contador del evento
-    this.actualizarContador() // Lo ejecutamos una vez al inicio
-    this.intervalo = setInterval(this.actualizarContador, 1000) // Y luego cada segundo
+
+    this.actualizarContador() 
+    this.intervalo = setInterval(this.actualizarContador, 1000) 
   },
   beforeUnmount() {
-    // Limpiamos el intervalo cuando el componente se destruye
+    
     clearInterval(this.intervalo)
   },
 }

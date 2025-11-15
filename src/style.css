@@ -29,10 +29,6 @@ a {
     color: inherit;
 }
 
-
-
-
-
 :root {
   --color-dark-bg: #0a0a0a;
   --color-text-light: #d4d4d4;
@@ -52,10 +48,10 @@ a {
 
 
 :root {
-    --color-principal: #ee05f2;     /* Fuxia del menú y acentos */
-    --color-boton: #FFC700;         /* Amarillo para botones */
-    --color-fondo: BLACK;           /* Azul oscuro profundo */
-    --color-fondo-secundario: BLACK; /* Azul un poco más claro */
+    --color-principal: #ee05f2;     
+    --color-boton: #FFC700;         
+    --color-fondo: BLACK;           
+    --color-fondo-secundario: BLACK; 
     --color-tarjeta: BLACK;
     --color-borde: #2a2a4a;
     --color-texto-principal: #ffffff;

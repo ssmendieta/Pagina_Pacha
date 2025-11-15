@@ -60,7 +60,7 @@ const socialLinks = [
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 450px; /* Valor intermedio - ajusta según tu preferencia */
+  gap: 450px; 
   max-width: 1200px;
   margin: 0 auto;
 }
