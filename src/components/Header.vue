@@ -124,6 +124,7 @@
           <router-link to="/inicio">INICIO</router-link>
           <router-link to="/evento">EVENTOS</router-link>
           <router-link to="/galeria">GALERIA</router-link>
+          <router-link to="/musica" >MUSICA</router-link>
         </nav>
 
         <div class="contenedor-registro-btn">
