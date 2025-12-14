@@ -1,5 +1,37 @@
-# Vue 3 + Vite
+# Pacha La Paz
+Tecnologías Utilizadas
+- Vue 3
+- Vite 
+- Vue Router 
+- Axios 
+- Spotify Web API 
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Instalación
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+1. Clona el repositorio:
+git clone https://github.com/tu-usuario/pacha-la-paz.git
+cd pacha-la-paz
+
+2. Instala las dependencias:
+npm install
+
+3. Configura las variables de entorno:
+
+# Crea un archivo .env en la raíz del proyecto
+VITE_SPOTIFY_CLIENT_ID=tu_client_id
+VITE_SPOTIFY_CLIENT_SECRET=tu_client_secret
+ 
+
+4. Inicia el servidor de desarrollo:
+npm run dev
+
+5. Abre tu navegador en `http://localhost:5173`
+
+Configuración de Spotify API
+
+Para usar la integración con Spotify:
+
+1. Ve a [Spotify for Developers](https://developer.spotify.com/dashboard)
+2. Crea una nueva aplicación
+3. Obtén tu `Client ID` y `Client Secret`
+4. Agrégalos al archivo `.env`
