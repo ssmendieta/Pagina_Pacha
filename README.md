@@ -9,15 +9,15 @@ Tecnologías Utilizadas
 Instalación
 
 1. Clona el repositorio:
-git clone https://github.com/tu-usuario/pacha-la-paz.git
-cd pacha-la-paz
+git clone https://github.com/ssmendieta/Pagina_Pacha.git
+cd Pagina_Pacha
 
 2. Instala las dependencias:
 npm install
 
 3. Configura las variables de entorno:
 
-# Crea un archivo .env en la raíz del proyecto
+Crea un archivo .env en la raíz del proyecto
 VITE_SPOTIFY_CLIENT_ID=tu_client_id
 VITE_SPOTIFY_CLIENT_SECRET=tu_client_secret
  
